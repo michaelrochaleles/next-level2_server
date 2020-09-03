@@ -4,18 +4,10 @@ const app = express();
 
 app.use(express.json());
 
-// http://
+app.get('/',(request,response) => {
 
-app.delete('/users/:id',(request,response) => {
-
-    console.log(request.params);
+    return response.json({status:200, message:"Hello Word"});
     
-    const users = [        
-        {name:'Michael', age:31},
-        {name:'Virginia', age: 20}
-    ];
-
-    return response.json(users);
 });
 
 app.listen(3333);
