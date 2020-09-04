@@ -14,7 +14,7 @@ export async function up(knex: knex) {
 
         table.timestamp('created_at')
             .defaultTo('now()')
-            .notNullable()
+            .notNullable();
     });
 }
 
